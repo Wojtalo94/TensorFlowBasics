@@ -1,9 +1,9 @@
-# 1. What the set of numbers X and Y has in common?
+# 1. Co zbiór liczb X i Y mają ze sobą wspólnego?
 from tensorflow import keras
 import numpy as np
 
 '''
-definicja samego modelu (wytrenowanej sieci neuronowej), w tym przypadku jest pojedynczą warstwą wskazywaną przez
+Definicja samego modelu (wytrenowanej sieci neuronowej), w tym przypadku jest pojedynczą warstwą wskazywaną przez
 'keras.layers.Dense', a ta warstwa ma w sobie pojedynczy neuron, oznaczony jako 'units=1'. Wprowadzamy również
 pojedynczą wartość do sieci neuronowej, która jest wartością 'X', a sieć neuronowa przewiduje, jaka będzie wartość
 'Y' dla tej wartości 'X'. Dlatego 'input_shape' to jedna wartość. 
@@ -11,7 +11,7 @@ pojedynczą wartość do sieci neuronowej, która jest wartością 'X', a sieć 
 model = keras.Sequential([keras.layers.Dense(units=1, input_shape=[1])])
 
 '''
-podczas kompilacji modelu występują dwie wartości, 'optimizer' i 'loss'. Oto klucz do uczenia maszynowego. Zasada 
+Podczas kompilacji modelu występują dwie wartości, 'optimizer' i 'loss'. Oto klucz do uczenia maszynowego. Zasada 
 działania uczenia maszynowego polega na tym, że model próbuje zgadnąć związek między liczbami. Na przykład może 
 przypuszczać że Y=5X+5. A podczas treningu program obliczy, jak dobry lub zły jest ten strzał, korzystając z funkcji
 'loss'. Następnie użyje funkcji 'optimizer', aby wygenerować kolejne przypuszczenie. Logika jest taka, że połączenie
